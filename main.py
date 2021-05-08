@@ -10,8 +10,8 @@ from cmapcustom import colorgetcustom
 
 customcmap=colorgetcustom()
 
-ncfiledir = "/home/durmaz/wrfout/wrfout_d01_2021-02-14.nc"
-fnamedir = "/home/durmaz/Visulazation/wrf_out_process/shapefiles/gadm36_TUR_1.shp"
+ncfiledir = "/home/durmaz/wrf/Build_WRF/WRF/run/wrfout_d01_2021-05-02_00:00:00"
+fnamedir = "/home/durmaz/visualization/shapefiles/gadm36_TUR_1.shp"
 
 def vor_500h(ncfiledir,fnamedir,timeg):
     from wrf import smooth2d
@@ -570,13 +570,12 @@ def rh850_t850(ncfiledir,fnamedir,timeg):
 
 
 
-for i in range(0,24):
-    wind_t2(ncfiledir,fnamedir,13)
-    vor_500h(ncfiledir,fnamedir,13)
-    slp_500h(ncfiledir,fnamedir,13)
-    slp_wind_t2(ncfiledir,fnamedir,13)
-    rh850_t850(ncfiledir,fnamedir,13)
-    rh850_wind850(ncfiledir,fnamedir,13)
+# for i in range(0,24):
+#     wind_t2(ncfiledir,fnamedir,13)
+#     vor_500h(ncfiledir,fnamedir,13)
+#     slp_500h(ncfiledir,fnamedir,13)
+#     slp_wind_t2(ncfiledir,fnamedir,13)
+#     rh850_t850(ncfiledir,fnamedir,13)
+#     rh850_wind850(ncfiledir,fnamedir,13)
 
-pre_slp_wind(ncfiledir,fnamedir)
-pre(ncfiledir,fnamedir)
+rh850_t850(ncfiledir,fnamedir,5)
